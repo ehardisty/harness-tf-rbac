@@ -15,7 +15,7 @@ resource "harness_platform_organization" "team" {
 resource "harness_platform_usergroup" "team_admin" {
   identifier           = "${var.org_identifier}_Admins"
   name                 = "${var.org_name} Admins"
-  org_id             = harness_platform_organization.team
+  org_id             = harness_platform_organization.team.id
   # linked_sso_id      = "Harness_DEV"
   # externally_managed = false
   # linked_sso_display_name = "Harness DEV"
@@ -28,7 +28,7 @@ resource "harness_platform_usergroup" "team_admin" {
 resource "harness_platform_usergroup" "team_executor" {
   identifier           = "${var.org_identifier}_Executors"
   name                 = "${var.org_name} Executors"
-  org_id             = harness_platform_organization.team
+  org_id             = harness_platform_organization.team.id
   # linked_sso_id      = "Harness_DEV"
   # externally_managed = false
   # linked_sso_display_name = "Harness DEV"
@@ -41,7 +41,7 @@ resource "harness_platform_usergroup" "team_executor" {
 resource "harness_platform_usergroup" "team_readonly" {
   identifier           = "${var.org_identifier}_ReadOnly"
   name                 = "${var.org_name} ReadOnly"
-  org_id             = harness_platform_organization.team
+  org_id             = harness_platform_organization.team.id
   # linked_sso_id      = "Harness_DEV"
   # externally_managed = false
   # linked_sso_display_name = "Harness DEV"
@@ -54,7 +54,7 @@ resource "harness_platform_usergroup" "team_readonly" {
 resource "harness_platform_usergroup" "team_approver" {
   identifier           = "${var.org_identifier}_Approvers"
   name                 = "${var.org_name} Approvers"
-  org_id             = harness_platform_organization.team
+  org_id             = harness_platform_organization.team.id
   # linked_sso_id      = "Harness_DEV"
   # externally_managed = false
   # linked_sso_display_name = "Harness DEV"

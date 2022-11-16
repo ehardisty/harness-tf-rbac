@@ -19,11 +19,11 @@ variable "platform_api_key" {
 }
 
 variable "org_name" {
-  type = string
+  type        = string
   description = "The name of the team (organisation)"
 }
 
 variable "org_id" {
-  type = string
+  type        = string
   description = "The id for the team (organisation)"
 }
