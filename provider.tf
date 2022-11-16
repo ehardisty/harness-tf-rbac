@@ -5,6 +5,7 @@ terraform {
       version = "0.7.1"
     }
   }
+  backend "local" {}
 }
 
 provider "harness" {
