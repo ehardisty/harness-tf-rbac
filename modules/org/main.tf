@@ -206,7 +206,7 @@ resource "harness_platform_roles" "team_readonly" {
 resource "harness_platform_role_assignments" "admin_role_binding" {
   identifier                = "${var.org_identifier}_admin_rolebinding"
   org_id                    = harness_platform_organization.team.id
-  resource_group_identifier = "_all_project_level_resources"
+  resource_group_identifier = "_all_organization_level_resources"
   role_identifier           = harness_platform_roles.team_admin.id
   principal {
     identifier = harness_platform_usergroup.team_admin.id
@@ -219,7 +219,7 @@ resource "harness_platform_role_assignments" "admin_role_binding" {
 resource "harness_platform_role_assignments" "executors_role_binding" {
   identifier                = "${var.org_identifier}_executors_rolebinding"
   org_id                    = harness_platform_organization.team.id
-  resource_group_identifier = "_all_project_level_resources"
+  resource_group_identifier = "_all_organization_level_resources"
   role_identifier           = harness_platform_roles.team_executor.id
   principal {
     identifier = harness_platform_usergroup.team_executor.id
@@ -232,7 +232,7 @@ resource "harness_platform_role_assignments" "executors_role_binding" {
 resource "harness_platform_role_assignments" "readonly_role_binding" {
   identifier                = "${var.org_identifier}_readonly_rolebinding"
   org_id                    = harness_platform_organization.team.id
-  resource_group_identifier = "_all_project_level_resources"
+  resource_group_identifier = "_all_organization_level_resources"
   role_identifier           = harness_platform_roles.team_readonly.id
   principal {
     identifier = harness_platform_usergroup.team_readonly.id
